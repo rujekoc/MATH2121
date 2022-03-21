@@ -16,7 +16,7 @@ p = 0.5; % probability of velocity reduction
 v_max = 6; % maximum velocity
 
 % Initialization
-x = mod(1:n,8)==0; % place cars equidistantly and at rest initially
+x = double(mod(1:n,8)==0); % place cars equidistantly and at rest initially
 
 % Computation
 for j = 1:1000 % time loop
