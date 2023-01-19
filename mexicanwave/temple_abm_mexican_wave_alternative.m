@@ -28,7 +28,7 @@ for j = 1:80 % time loop
     plot(1:n,x,'*-')
     % Update rule
     x0 = x; % create a copy of state vector
-    xs = x([end 1:end-1]); % left-shifted copy of state vector
+    xs = x([end 1:end-1]); % right-shifted copy of state vector
     for i = 1:n % loop over state vector elements
         if x0(i)==0&&xs(i)==1 % if 0 & left neighbor 1,
             x(i) = 1; % become 1
